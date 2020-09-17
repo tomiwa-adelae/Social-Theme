@@ -22,30 +22,58 @@
       </nav>
 
       <section class="container">
-         <h1 class="large text-primary">Sign Up</h1>
-         <p class="lead"><i class="fas fa-user"></i>Create Your Account</p>
-         <form action="dashboard.html" class="form">
-            <div class="form-group">
-               <input type="text" placeholder="Name" />
+         <div class="register-section">
+            <div class="section-header">
+               <div class="section-heading">
+                  <h1 class="large text-primary">Sign Up</h1>
+                  <p class="lead">
+                     <i class="fas fa-user"></i> Create Your Account
+                  </p>
+               </div>
+               <div class="success-alert">Welcome To DevConnector!</div>
             </div>
-            <div class="form-group">
-               <input type="email" placeholder="Email Address" />
-               <small class="form-text"
-                  >This site uses Gravatar, so if you want to use a Gravatar
-                  Email</small
-               >
-            </div>
-            <div class="form-group">
-               <input type="password" placeholder="Password" />
-            </div>
-            <div class="form-group">
-               <input type="password" placeholder="Confirm Password" />
-            </div>
-            <input type="submit" value="Register" class="btn btn-primary" />
-         </form>
-         <p class="my-1">
-            Already have an Account? <a href="login.html">Sign In</a>
-         </p>
+            <div class="error-message"></div>
+            <form class="form" id="register-form">
+               <div class="form-group">
+                  <input type="text" placeholder="Name" class="name-input" />
+                  <small class="error-text"> </small>
+               </div>
+               <div class="form-group">
+                  <input
+                     type="email"
+                     placeholder="Email Address"
+                     class="email-input"
+                  />
+                  <small class="form-text"
+                     >This site uses Gravatar, so if you want to use a Gravatar
+                     Email</small
+                  >
+                  <!-- <small class="error-text"></small> -->
+               </div>
+               <div class="form-group">
+                  <input
+                     type="password"
+                     placeholder="Password"
+                     class="password-input"
+                  />
+                  <!-- <small class="error-text"> </small> -->
+               </div>
+               <div class="form-group">
+                  <input
+                     type="password"
+                     placeholder="Confirm Password"
+                     class="confirm-password-input"
+                  />
+                  <!-- <small class="error-text" </small> -->
+               </div>
+               <input type="submit" value="Register" class="btn btn-primary" />
+            </form>
+            <p class="my-1">
+               Already have an Account? <a href="login.html">Sign In</a>
+            </p>
+         </div>
       </section>
+
+      <script src="js/register.js"></script>
    </body>
 </html>
