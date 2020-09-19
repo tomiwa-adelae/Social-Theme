@@ -33,7 +33,10 @@
       </nav>
 
       <section class="container">
-         <h1 class="large text-primary">Dashboard</h1>
+         <div class="dashboard-header">
+            <h1 class="large text-primary">Dashboard</h1>
+            <div class="delete-alert"></div>
+         </div>
          <p class="lead"><i class="fas fa-user"></i> Welcome Will Smith</p>
          <div class="dash-button">
             <a href="create-profile.html" class="btn">
@@ -59,23 +62,23 @@
                   <th class="hide-sm">Years</th>
                </tr>
             </thead>
-            <tbody>
+            <tbody class="exp-one">
                <tr>
-                  <td>Amazon</td>
+                  <td class="exp-title">Amazon</td>
                   <td class="hide-sm">Full Stack</td>
                   <td class="hide-sm">2004 - 2010</td>
                   <td>
-                     <button class="btn btn-danger">
+                     <button class="btn btn-danger table-btn-exp-one">
                         <i class="fas fa-trash"></i>
                      </button>
                   </td>
                </tr>
                <tr>
-                  <td>Microsoft</td>
+                  <td class="exp-title">Microsoft</td>
                   <td class="hide-sm">Senior Developer</td>
                   <td class="hide-sm">2010 - Current</td>
                   <td>
-                     <button class="btn btn-danger">
+                     <button class="btn btn-danger table-btn-exp-two">
                         <i class="fas fa-trash"></i>
                      </button>
                   </td>
@@ -92,13 +95,13 @@
                   <th class="hide-sm">Years</th>
                </tr>
             </thead>
-            <tbody>
+            <tbody class="edu-one">
                <tr>
-                  <td>University of Sussex</td>
+                  <td class="edu-title">University of Sussex</td>
                   <td class="hide-sm">Master</td>
                   <td class="hide-sm">1992 - 1998</td>
                   <td>
-                     <button class="btn btn-danger">
+                     <button class="btn btn-danger table-btn-edu-one">
                         <i class="fas fa-trash"></i>
                      </button>
                   </td>
@@ -107,10 +110,12 @@
          </table>
 
          <div class="my-2">
-            <button class="btn btn-danger">
+            <button class="btn btn-danger delete-account delete-account-btn">
                <i class="fas fa-user-minus"></i> Delete My Account
             </button>
          </div>
       </section>
+
+      <script src="js/dashboard.js"></script>
    </body>
 </html>

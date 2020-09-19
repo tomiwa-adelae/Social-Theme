@@ -157,11 +157,13 @@ body {
 }
 
 // REGISTER PAGE
-.error-message {
-   font-size: 1em;
+.error::placeholder {
    font-weight: 200;
    letter-spacing: 1px;
    font-family: inherit;
+   display: block;
+   color: $danger-color;
+   @include easeOut;
 }
 
 .section-header {
@@ -213,6 +215,12 @@ body {
    img {
       width: 150px;
    }
+}
+
+.dashboard-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
 
 @import 'mobile';
