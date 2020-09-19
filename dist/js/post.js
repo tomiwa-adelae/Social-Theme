@@ -24,6 +24,7 @@ function postsFormSubmitted(e) {
       postDiv.classList.add('bg-white');
       postDiv.classList.add('my-1');
       postDiv.classList.add('p-1');
+      postDiv.classList.add('post-comment');
 
       // CREATE A POST HEADER DIV
       const postHeaderDiv = document.createElement('div');
@@ -61,37 +62,8 @@ function postsFormSubmitted(e) {
       // APPEND THE TXT FROM THE INPUT BOX INT THE PARAGRApH
       postContentParagraph.innerHTML = postFormText;
 
-      // CREATE A THUMBS UP BUTTON
-      const thumbsUpBtn = document.createElement('button');
-      thumbsUpBtn.classList.add('btn');
-
-      // ADD THE THUMBS UP ICON TO THE BUTTON
-      thumbsUpBtn.innerHTML = '<i class="fas fa-thumbs-up"><span>4</span></i>';
-
-      // CREATE A THUMBS DOWN BUTTON
-      const thumbsDownBtn = document.createElement('button');
-      thumbsDownBtn.classList.add('btn');
-
-      // ADD THE THUMBS Down ICON TO THE BUTTON
-      thumbsDownBtn.innerHTML = '<i class="fas fa-thumbs-down"></i>';
-
-      // CREATE AN ANCHOR TAG FOR THE DISCUSSION
-      const anchorTagDiscussion = document.createElement('a');
-      anchorTagDiscussion.href = 'post.html';
-      anchorTagDiscussion.classList.add('btn');
-      anchorTagDiscussion.classList.add('btn-primary');
-
-      // CREATE A TEXT FOR THE ANCHOR TAG
-      const anchorTagDiscussionText = document.createTextNode('Discussion');
-
-      // APPEND THE ANCHOR TAG DISCUSSION TEXT TO THE ANCHOR TAG DISCUSSION
-      anchorTagDiscussion.appendChild(anchorTagDiscussionText);
-
       // APPEND ALL TO THE POST CONTENT DIV
       postContentDiv.appendChild(postContentParagraph);
-      postContentDiv.appendChild(thumbsUpBtn);
-      postContentDiv.appendChild(thumbsDownBtn);
-      postContentDiv.appendChild(anchorTagDiscussion);
 
       // APPEND THE POST CONTENT DIV TO THE POST DIV
       postDiv.appendChild(postContentDiv);
