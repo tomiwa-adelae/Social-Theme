@@ -37,12 +37,58 @@ function registerFormSubmitted(e) {
       confirmPasswordInput.classList.replace('error', 'success');
    }
 
+   // if (passwordInput.value.length < 6) {
+   //    //   Create an alert
+   //    const errorAlert = document.createElement('div');
+   //    errorAlert.style.color = '#dc3545';
+   //    errorAlert.innerHTML =
+   //       '<i class="fas fa-exclamation-circle"></i> Password must be more than 6 Characters';
+
+   //    // Put It In The HTML
+   //    const errorSmallTag = document.querySelector('.password-error-message');
+   //    errorSmallTag.appendChild(errorAlert);
+
+   //    // Set timeout
+   //    setTimeout(() => errorAlert.remove(), 10000);
+   // } else {
+   //    console.log('more tha 6');
+   // }
+
    if (
       nameInput.value === '' ||
       emailInput.value === '' ||
       passwordInput.value === '' ||
-      confirmPasswordInput.value === ''
+      confirmPasswordInput.value === '' ||
+      passwordInput.value != confirmPasswordInput.value ||
+      passwordInput.value.length < 6
    ) {
+      //   Create an alert
+      const passwordErrorAlert = document.createElement('div');
+      passwordErrorAlert.style.color = '#dc3545';
+      passwordErrorAlert.innerHTML =
+         '<i class="fas fa-exclamation-circle"></i> Password must be more than 6 Characters';
+
+      // Put It In The HTML
+      const passwordErrorSmallTag = document.querySelector(
+         '.password-error-message'
+      );
+      passwordErrorSmallTag.appendChild(passwordErrorAlert);
+
+      // Set timeout
+      setTimeout(() => passwordErrorAlert.remove(), 10000);
+
+      //   Create an alert
+      const errorAlert = document.createElement('div');
+      errorAlert.style.color = '#dc3545';
+      errorAlert.innerHTML =
+         '<i class="fas fa-exclamation-circle"></i> Please Re-Enter Your Password';
+
+      // Put It In The HTML
+      const errorSmallTag = document.querySelector('.error-message');
+      errorSmallTag.appendChild(errorAlert);
+
+      // Set timeout
+      setTimeout(() => errorAlert.remove(), 3000);
    } else {
       successMessage.classList.add('show-success-alert');
 
