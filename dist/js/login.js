@@ -35,7 +35,7 @@ function loginFormSubmitted(e) {
       // APPEND THE NEW DIV TO THE DIV WITH THE CLASS OF SUCCESS MESSAGE IN THE HTML
       successMessage.appendChild(userName);
 
-      setTimeout(() => successMessage.remove(), 5000);
+      // setTimeout(() => successMessage.remove(), 5000);
 
       // GO TO THE DASHBOARD
       successMessage.addEventListener('transitionend', function () {

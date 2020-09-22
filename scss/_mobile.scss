@@ -76,4 +76,49 @@
          padding: 0.3rem 0.4rem;
       }
    }
+   .section-header {
+      .show-success-alert {
+         @include set-background($success-color);
+         width: 20rem;
+         height: 5rem;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: absolute;
+         top: 7rem;
+         right: 0;
+         border-bottom: 3px solid lighten($success-color, 20%);
+         transition: all 4s ease-out;
+      }
+   }
+
+   // TABLE
+   .table {
+      i {
+         pointer-events: none;
+      }
+      th,
+      td {
+         padding: 1rem;
+         text-align: left;
+         width: 100%;
+      }
+
+      th {
+         background: $light-color;
+      }
+   }
+}
+
+.delete-alert {
+   position: absolute;
+   transition: all ease 2s;
+   top: 6.5rem;
+   right: -70%;
+}
+
+.show-alert {
+   position: fixed;
+   right: 2%;
+   width: 45%;
 }
